@@ -1,1 +1,4 @@
 # Linux-Client-Server
+The project for the Winter 2024 COMP-8567 course involves creating a client-server system where the client can request files from a server. The server and two mirror servers run on different machines and communicate with clients via sockets. The server processes client requests through a function called `crequest()` which forks a child process to handle each client. Clients can request directory listings, file details, and files within specified size ranges or types, with results returned in specific formats or archived in `.tar.gz` files.
+
+The clients enter commands in a defined syntax to interact with the server. Commands include listing directories, retrieving file details, and requesting files based on size, type, or creation date. The server distributes the client connections among itself and its mirrors alternately. The project emphasizes understanding client-server communication and handling multiple client requests efficiently.
